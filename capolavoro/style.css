@@ -1,0 +1,69 @@
+h1{
+    color: bisque; 
+    font-family: Quicksand, sans-serif;
+}
+*{  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: darkred;
+    font-style: oblique;
+}
+body{
+    min-height: 100vh;
+    background: cadetblue;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    color: crimson;
+    background-color: burlywood;
+    border-radius: 2em;
+    padding: 4em 3em;
+}
+.title{
+    font-size: 3em;
+}
+hr{
+    width: 100%;
+    background-color: darkblue;
+    height: 5px;
+    border-radius: 1em;
+    border: black;
+}
+.timer{
+    font-size: 10em;
+    font-weight: 700;
+}
+.button-wrapper{
+    display: flex;
+    gap: 1em;
+}
+button{
+    font-size: 2em;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 0,5em 1.5em;
+    border-radius: 0,5em;
+    border: black;
+    color: deeppink;
+    cursor: grabbing;
+    transition: 0,2s ease-in-out
+}
+button:hover{
+    transform:translateY(-10px) ;
+}
+#Start{
+    background-color: palevioletred
+}
+#Stop{
+    background-color: paleturquoise;
+}
+#Reset{
+    background-color: springgreen;
+}
