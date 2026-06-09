@@ -272,6 +272,7 @@ for (var i= 0; i < currentDate; i++) {
 
 /* UPDATE COMPLETED ON CALENDAR*/chosenDay
 var daysDivs = document.querySelectorAll(".day");
+console.log("daysCompleted iniziale:", daysCompleted);
 for(var i=0; i<currentDate;i++){
   daysDivs[i].onclick = function (e) {
     var num = e.target.innerText;
@@ -279,17 +280,20 @@ for(var i=0; i<currentDate;i++){
     var storageString = ""+(currentMonth + 1) + "-" + num + "-" + currentYear;
       console.log("storageString:", storageString);
 console.log("value:", localStorage.getItem(storageString));
+      console.log("prima click:", daysCompleted);
 
 
     if(localStorage.getItem(storageString) === "false"){
     selectedDate.style.backgroundColor="rgb(179, 228, 248)";
     localStorage.setItem(storageString, true);
     daysCompleted++;
+        console.log("dopo ++:", daysCompleted);
 
     }else if(localStorage.getItem(storageString) === "true"){
     selectedDate.style.backgroundColor="white";
     localStorage.setItem(storageString, false);
     daysCompleted--;
+        console.log("dopo --:", daysCompleted);
       }
 
       totalDays.innerHTML= daysCompleted + "/" + dayCount;
